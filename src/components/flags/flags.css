@@ -1,0 +1,5 @@
+#flags {
+    gap: 50px;
+    row-gap: 50px;
+    flex-wrap: wrap;
+}

@@ -1,0 +1,32 @@
+nav {
+    display: flex;
+
+    width: 100vw;
+    height: 100px;
+    
+    background-color: var(--white);
+    box-shadow: 0px 5px 5px var(--shadow);
+}
+
+.inner_nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    width: 60%;
+
+    margin: 0 auto;
+}
+
+.inner_nav h1 {
+    cursor: pointer;
+}
+
+.darkmode {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    cursor: pointer;
+}

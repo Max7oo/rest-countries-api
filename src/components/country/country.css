@@ -1,0 +1,38 @@
+#country {
+    align-items: center;
+    gap: 50px;
+}
+
+.left {
+    width: 50%;
+}
+
+.left img {
+    width: 100%;
+}
+
+.right {
+    width: 50%;
+}
+
+.country_info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.borders {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.box {
+    padding: 5px 15px;
+    background-color: var(--white);
+    box-shadow: 0px 0px 5px var(--shadow);
+    border-radius: 5px;
+    cursor: pointer;
+}

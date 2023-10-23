@@ -1,24 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import countries from "./data.json";
+
+import { Route, Routes } from "react-router-dom";
+import { useState } from "react";
+import Home from "./pages/home/home";
+import Item from "./pages/item/item";
 
 function App() {
+  const [check, setChecked] = useState(
+    JSON.parse(localStorage.getItem("selectedTheme"))
+  );
+  const [data, setData] = useState(countries);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <main>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Home
+                check={check}
+                setChecked={setChecked}
+                data={data}
+                setData={setData}
+              />
+            }
+          />
+          <Route
+            path="/:id"
+            element={
+              <Item
+                check={check}
+                setChecked={setChecked}
+                data={data}
+                setData={setData}
+              />
+            }
+          />
+        </Routes>
+      </main>
+    </>
   );
 }
 
